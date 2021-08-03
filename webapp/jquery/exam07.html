@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡<br> abcdefg </p>
+	<p id="p3">abcdefghijklmn</p>
+	
+</body>
+	
+<script type="text/javascript">
+
+	$("#p1").html("<strong>가나다라마바사아자차카타파하</strong>");
+	$("#p2").text("<strong>가나다라마바사</strong>"); //html미적용으로 문자열로 출력됨
+	$('#p3').text('<strong>가나다</strong> 라마바사');
+	
+	var str = $("#p1").html();
+	console.log(str);
+	
+	var str2 = $("#p2").text();
+	console.log(str2);
+	
+</script>	
+
+</html>
