@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>객체</h1>
+</body>
+
+	<script type="text/javascript">
+	
+	var name = "김민수";
+	// 자바와 다르게 name : "김민수" 으로 표현됨
+	
+	var guestbookVo = {
+			name : "김민수"
+		,	password : "1234"
+		,	content : "hello"
+		,	showInfo : function(){ 	//변수에 함수를 넣어 사용가능함
+							console.log(this.name + "," + this.password + "," + this.content )
+						}
+	};
+	
+	console.log(gusetbookVo.name);
+	console.log(gusetbookVo.password);
+	console.log(gusetbookVo.content);
+	guestbookVo.showInfo();
+	
+	</script>
+	
+	<script type="text/javascript">
+			console.log("===== 객체 배열에 넣기 =====");
+
+			var person01 = {
+				name : "홍길동",
+				hp : "010-1234-1234",
+				company : "02-123-1234"
+			};
+
+			var person02 = {
+				name : "전우치",
+				hp : "010-1111-1111",
+				company : "02-111-1111"
+			};
+
+			var person03 = {
+				name : "손오공",
+				hp : "010-2222-2222",
+				company : "02-222-2222"
+			};
+
+			// 방법 1 (한 번에 넣기)
+			var personList = [ person01, person02, person03 ];
+
+			console.log(personList);
+
+			// 방법 2 (직접 넣기)
+			var personList02 = [];
+			personList02[0] = person01;
+			personList02[1] = person02;
+
+			console.log(personList02);
+
+			// 방법 3 (push로 넣기)
+			var personList03 = [];
+			personList03.push(person01);
+			personList03.push(person02);
+
+			console.log(personList03);
+
+			// for문으로 출력
+			for (var i = 0; i < personList03.length; i++) {
+				console.log(personList03[i].name);
+				console.log(personList03[i].hp);
+			}
+	</script>
+
+
+
+</html>

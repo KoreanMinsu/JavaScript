@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>EVENT</h1>
+	
+	<h2>h2Tag_1</h2>
+	<h2>h2Tag_2</h2>
+	<h2>h2Tag_3</h2>
+	
+	
+	<div>
+	<input id="btn" type="button" VALUE="자바스크립트테스트버튼" />
+	<h1 id="display">이름출력영역</h1>
+	</div>
+	
+	
+		
+</body>
+
+<script type="text/javascript">
+	
+	//문서의 모든 요소 로딩후 함수 수행
+	window.onload = function(){
+		
+	var testButton = document.getElementById("btn");
+	var testArea = document.getElementById("display");
+	
+	console.log(testArea);
+	
+	
+	//html 태그로 가져오기
+	var h2 = document.getElementsByTagName("h2");
+	console.log(h2);
+	
+	//class로 가져오기
+	var h3Array = document.getElementsByClassName("tagh3");
+	console.log(h3Array);
+	
+	
+	
+	//id가 "btn"인 버튼 클릭시  function() 수행
+	testButton.onclick = function(){
+		
+		testArea.innerHTML = "<font color='red'>김민수<font>";			
+	};
+};
+
+</script>
+
+
+
+</html>
